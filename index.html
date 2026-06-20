@@ -24,13 +24,15 @@
   .lead{color:var(--muted);font-size:16px}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;cursor:pointer;
     font-family:inherit;font-weight:700;font-size:16px;border-radius:12px;padding:15px 24px;transition:.2s;text-decoration:none}
+  .btn svg{width:19px;height:19px;flex:0 0 auto}
   .btn-primary{background:var(--primary);color:#fff;box-shadow:var(--shadow)}
   .btn-primary:hover{background:var(--primary-d);transform:translateY(-1px)}
   .btn-gold{background:var(--accent);color:#fff}
   .btn-ghost{background:transparent;color:var(--primary);border:1.5px solid var(--primary)}
   .btn-block{display:flex;width:100%}
 
-  .ribbon{background:#2C3C2D;color:#DDE6DC;text-align:center;font-size:12.5px;padding:8px 12px;font-weight:600}
+  .ribbon{display:flex;align-items:center;justify-content:center;gap:7px;background:#2C3C2D;color:#DDE6DC;text-align:center;font-size:12.5px;padding:8px 12px;font-weight:600}
+  .ribbon svg{width:15px;height:15px;color:#D8B488;flex:0 0 auto}
   .ribbon b{color:#D8B488}
   .bar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;
     padding:13px 20px;background:rgba(245,241,234,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -40,7 +42,8 @@
 
   .hero{background:linear-gradient(180deg,var(--tint),var(--bg));padding-top:42px;padding-bottom:38px}
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-  .chip{background:#fff;border:1px solid var(--line);color:var(--primary-d);font-size:13px;font-weight:600;padding:7px 13px;border-radius:9px;box-shadow:0 2px 6px rgba(0,0,0,.03)}
+  .chip{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);color:var(--primary-d);font-size:13px;font-weight:600;padding:7px 13px;border-radius:9px;box-shadow:0 2px 6px rgba(0,0,0,.03)}
+  .chip svg{width:16px;height:16px;color:var(--accent);flex:0 0 auto}
   .hero-cta{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
 
   .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;background:var(--primary);color:#fff;padding:24px}
@@ -48,23 +51,27 @@
 
   .prog{display:grid;gap:12px;margin-top:18px}
   .pcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;gap:14px;align-items:flex-start}
-  .pcard .ico{flex:0 0 46px;width:46px;height:46px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+  .pcard .ico{flex:0 0 46px;width:46px;height:46px;border-radius:12px;background:var(--tint);display:grid;place-items:center;color:var(--primary)}
+  .pcard .ico svg{width:24px;height:24px}
   .pcard h3{font-size:16px;margin-bottom:3px}.pcard p{font-size:13.5px;color:var(--muted)}
 
   .coach{display:flex;gap:18px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:6px}
   .avatar{flex:0 0 84px;width:84px;height:84px;border-radius:14px;background:linear-gradient(160deg,#566b56,#3f5340);
-    display:grid;place-items:center;color:#fff;font-weight:800;font-size:22px;box-shadow:var(--shadow)}
+    display:grid;place-items:center;color:#fff;box-shadow:var(--shadow)}
+  .avatar svg{width:46px;height:46px}
   .credos{list-style:none;margin-top:10px;display:grid;gap:7px}
   .credos li{display:flex;gap:9px;align-items:flex-start;font-size:14px}
-  .credos li::before{content:"✓";color:var(--accent);font-weight:800}
+  .credos li svg{width:17px;height:17px;color:var(--accent);flex:0 0 auto;margin-top:2px}
 
   .review{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:12px}
-  .stars{color:var(--accent);letter-spacing:2px;font-size:14px}
+  .stars{display:flex;gap:2px;color:var(--accent)}
+  .stars svg{width:16px;height:16px}
   .review p{margin:8px 0;font-size:14.5px}.review .who{font-size:13px;color:var(--muted)}
 
   .loc{background:var(--tint)}
-  .map{height:150px;border-radius:14px;background:repeating-linear-gradient(45deg,#dcd5c6,#dcd5c6 12px,#e4ddce 12px,#e4ddce 24px);
-    display:grid;place-items:center;color:var(--muted);font-size:13px;border:1px solid var(--line);margin-top:14px}
+  .loccard{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:14px}
+  .loccard .pin{flex:0 0 46px;width:46px;height:46px;border-radius:12px;background:var(--primary);display:grid;place-items:center;color:#fff}
+  .loccard .pin svg{width:24px;height:24px}
   .info{display:grid;gap:10px;margin-top:16px}
   .info div{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding-bottom:9px;font-size:15px}
   .info b{color:var(--primary-d)}
@@ -80,13 +87,16 @@
   input:focus,select:focus,textarea:focus{border-color:var(--accent);background:rgba(255,255,255,.14)}
   .form-note{font-size:12.5px;color:rgba(255,255,255,.7);text-align:center;margin-top:4px}
   .success{display:none;text-align:center;padding:30px 10px}
-  .success .check{width:64px;height:64px;border-radius:50%;background:var(--accent);color:#fff;font-size:34px;display:grid;place-items:center;margin:0 auto 14px}
+  .success .check{width:64px;height:64px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;margin:0 auto 14px}
+  .success .check svg{width:34px;height:34px}
   .success h2{color:#fff}.success p{color:rgba(255,255,255,.85);margin-top:6px}
 
   .faq{border-bottom:1px solid var(--line)}
-  .faq summary{cursor:pointer;list-style:none;padding:15px 0;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+  .faq summary{cursor:pointer;list-style:none;padding:15px 0;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:12px}
   .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+";color:var(--primary);font-size:20px}.faq[open] summary::after{content:"–"}
+  .faq summary .q-ico{flex:0 0 auto;color:var(--primary);transition:transform .2s}
+  .faq summary .q-ico svg{width:20px;height:20px;display:block}
+  .faq[open] summary .q-ico{transform:rotate(45deg)}
   .faq p{padding-bottom:15px;color:var(--muted);font-size:14.5px}
 
   footer{background:#23311F;color:rgba(255,255,255,.7);padding:30px 24px;font-size:13px;text-align:center}
@@ -100,7 +110,10 @@
 <body>
 <div class="wrap">
 
-  <div class="ribbon">📄 <b>포트폴리오 시안</b> · 가상의 필라테스 스튜디오로 제작한 랜딩페이지 예시입니다</div>
+  <div class="ribbon">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M5 8V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3"/><path d="M3 13h7"/><path d="m7 10-3 3 3 3"/></svg>
+    <span><b>포트폴리오 시안</b> · 가상의 필라테스 스튜디오로 제작한 랜딩페이지 예시입니다</span>
+  </div>
 
   <div class="bar">
     <div class="brand"><span class="logo">C</span> 코어필라테스</div>
@@ -113,13 +126,25 @@
     <p class="lead">그룹 수업에서 못 받던 1:1 밀착 지도. 몸 상태를 먼저 보고, 당신에게만 맞춘 동작으로
       통증 없이 바른 자세를 만들어 드립니다. <b>첫 방문은 무료 체험 + 30% 할인</b>으로 부담 없이.</p>
     <div class="chips">
-      <span class="chip">🧘 1:1 맞춤 지도</span>
-      <span class="chip">🎁 첫 체험 무료</span>
-      <span class="chip">🚇 역세권 3분</span>
+      <span class="chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.5"/><path d="M12 7.5v6"/><path d="m12 9-5 2.5"/><path d="m12 9 5 2.5"/><path d="m9 20 3-6 3 6"/></svg>
+        1:1 맞춤 지도
+      </span>
+      <span class="chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8"/><path d="M12 8v13"/><path d="M12 8S10 4 7.5 4 5 8 5 8h7Z"/><path d="M12 8s2-4 4.5-4S19 8 19 8h-7Z"/></svg>
+        첫 체험 무료
+      </span>
+      <span class="chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="14" rx="3"/><path d="M6 9h12"/><path d="M8 21h8"/><path d="M9 17l-1.5 4"/><path d="M15 17l1.5 4"/><circle cx="9" cy="13" r=".6"/><circle cx="15" cy="13" r=".6"/></svg>
+        역세권 3분
+      </span>
     </div>
     <div class="hero-cta">
       <a href="#apply" class="btn btn-primary">무료 체험 예약하기</a>
-      <a href="tel:0212345678" class="btn btn-ghost">📞 전화 문의</a>
+      <a href="tel:0212345678" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        전화 문의
+      </a>
     </div>
   </section>
 
@@ -133,9 +158,24 @@
     <div class="eyebrow">이런 분께 맞아요</div>
     <h2>목표에 맞춰 설계합니다</h2>
     <div class="prog">
-      <div class="pcard"><div class="ico">🩹</div><div><h3>재활 필라테스</h3><p>허리·목·무릎 통증, 출산 후 회복. 무리 없는 동작부터 단계별로.</p></div></div>
-      <div class="pcard"><div class="ico">🧍</div><div><h3>체형 교정</h3><p>거북목·라운드숄더·골반 불균형을 바로잡아 자세를 바꿉니다.</p></div></div>
-      <div class="pcard"><div class="ico">🔥</div><div><h3>다이어트·코어</h3><p>속근육을 깨워 탄탄한 라인과 흔들리지 않는 코어를 만듭니다.</p></div></div>
+      <div class="pcard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 7.5 7.5 4.5a3 3 0 0 1 4.2 0l7.8 7.8a3 3 0 0 1 0 4.2l-3 3a3 3 0 0 1-4.2 0L4.5 11.7a3 3 0 0 1 0-4.2Z"/><path d="m9 9 6 6"/><path d="M11 7l1 1"/><path d="M7 11l1 1"/><path d="M16 12l1 1"/><path d="M12 16l1 1"/></svg>
+        </div>
+        <div><h3>재활 필라테스</h3><p>허리·목·무릎 통증, 출산 후 회복. 무리 없는 동작부터 단계별로.</p></div>
+      </div>
+      <div class="pcard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2"/><path d="M12 6.5v7"/><path d="M12 13.5 8 21"/><path d="M12 13.5 16 21"/><path d="M6 9h12"/></svg>
+        </div>
+        <div><h3>체형 교정</h3><p>거북목·라운드숄더·골반 불균형을 바로잡아 자세를 바꿉니다.</p></div>
+      </div>
+      <div class="pcard">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s5 4 5 9a5 5 0 0 1-10 0c0-1.5.7-2.8 1.4-3.8C9 9 9.5 11 11 11c0-2 0-5 1-8Z"/><path d="M12 21a3 3 0 0 0 3-3c0-1.5-1.5-2.5-3-4-1.5 1.5-3 2.5-3 4a3 3 0 0 0 3 3Z"/></svg>
+        </div>
+        <div><h3>다이어트·코어</h3><p>속근육을 깨워 탄탄한 라인과 흔들리지 않는 코어를 만듭니다.</p></div>
+      </div>
     </div>
   </section>
 
@@ -143,13 +183,21 @@
     <div class="eyebrow">강사 소개</div>
     <h2>혼자가 아니라, 전담으로</h2>
     <div class="coach">
-      <div class="avatar">康</div>
+      <div class="avatar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg>
+      </div>
       <div>
         <h3 style="font-size:17px">원장 강수진</h3>
         <p class="lead" style="font-size:14px">"자세가 바뀌면 일상이 바뀝니다."</p>
         <ul class="credos">
-          <li>국제 필라테스 지도자 자격(매트·기구)</li>
-          <li>재활·체형교정 전문 8년</li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            국제 필라테스 지도자 자격(매트·기구)
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            재활·체형교정 전문 8년
+          </li>
         </ul>
       </div>
     </div>
@@ -159,18 +207,42 @@
   <section>
     <div class="eyebrow">회원 후기</div>
     <h2>먼저 시작한 분들</h2>
-    <div class="review"><div class="stars">★★★★★</div>
+    <div class="review">
+      <div class="stars">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m12 3 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8 6.8 19l1-5.8L3.6 9.1l5.8-.8Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m12 3 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8 6.8 19l1-5.8L3.6 9.1l5.8-.8Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m12 3 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8 6.8 19l1-5.8L3.6 9.1l5.8-.8Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m12 3 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8 6.8 19l1-5.8L3.6 9.1l5.8-.8Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m12 3 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8 6.8 19l1-5.8L3.6 9.1l5.8-.8Z"/></svg>
+      </div>
       <p>"10년 된 허리 통증 때문에 운동을 못 했는데, 여기선 제 상태부터 봐주셔서 무리 없이 했어요. 두 달 만에 일상이 편해졌습니다."</p>
-      <div class="who">— 30대 직장인 회원</div></div>
-    <div class="review"><div class="stars">★★★★★</div>
+      <div class="who">— 30대 직장인 회원</div>
+    </div>
+    <div class="review">
+      <div class="stars">
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m12 3 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8 6.8 19l1-5.8L3.6 9.1l5.8-.8Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m12 3 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8 6.8 19l1-5.8L3.6 9.1l5.8-.8Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m12 3 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8 6.8 19l1-5.8L3.6 9.1l5.8-.8Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m12 3 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8 6.8 19l1-5.8L3.6 9.1l5.8-.8Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m12 3 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8 6.8 19l1-5.8L3.6 9.1l5.8-.8Z"/></svg>
+      </div>
       <p>"그룹 수업은 따라가기 바빴는데, 1:1이라 동작 하나하나 교정받으니 자세가 진짜 바뀌었어요."</p>
-      <div class="who">— 자세 교정 회원</div></div>
+      <div class="who">— 자세 교정 회원</div>
+    </div>
   </section>
 
   <section class="loc">
     <div class="eyebrow">오시는 길</div>
     <h2>역에서 3분, 바로 여기</h2>
-    <div class="map">📍 지도가 들어갈 자리 (실제 주소로 교체)</div>
+    <div class="loccard">
+      <div class="pin">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.5-6.5-10A6.5 6.5 0 0 1 18.5 11c0 4.5-6.5 10-6.5 10Z"/><circle cx="12" cy="11" r="2.5"/></svg>
+      </div>
+      <div>
+        <h3 style="font-size:16px;margin-bottom:3px">코어필라테스 스튜디오</h3>
+        <p style="font-size:13.5px;color:var(--muted)">OO역 2번 출구에서 도보 3분 · 큰길 따라 직진</p>
+      </div>
+    </div>
     <div class="info">
       <div><span>주소</span><b>서울 OO구 OO로 00, 3층</b></div>
       <div><span>운영시간</span><b>평일 07–22시 · 주말 09–18시</b></div>
@@ -197,7 +269,9 @@
       </form>
     </div>
     <div class="success" id="success">
-      <div class="check">✓</div>
+      <div class="check">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
       <h2>예약 신청이 접수되었습니다</h2>
       <p>감사합니다.<br>곧 연락드려 체험 시간을 확정해 드리겠습니다.</p>
     </div>
@@ -206,9 +280,9 @@
   <section>
     <div class="eyebrow">자주 묻는 질문</div>
     <h2 style="margin-bottom:10px">FAQ</h2>
-    <details class="faq"><summary>운동 처음인데 괜찮을까요?</summary><p>네. 첫 수업에서 몸 상태와 가동범위를 먼저 확인하고, 무리 없는 동작부터 단계적으로 진행합니다.</p></details>
-    <details class="faq"><summary>통증이 있어도 할 수 있나요?</summary><p>가능합니다. 재활 목적의 회원이 많으시며, 통증 부위를 피해 안전한 범위에서 지도합니다.</p></details>
-    <details class="faq"><summary>무료 체험은 정말 무료인가요?</summary><p>네. 첫 방문 1회 체험은 무료이며, 등록은 체험 후 결정하셔도 됩니다.</p></details>
+    <details class="faq"><summary>운동 처음인데 괜찮을까요?<span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary><p>네. 첫 수업에서 몸 상태와 가동범위를 먼저 확인하고, 무리 없는 동작부터 단계적으로 진행합니다.</p></details>
+    <details class="faq"><summary>통증이 있어도 할 수 있나요?<span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary><p>가능합니다. 재활 목적의 회원이 많으시며, 통증 부위를 피해 안전한 범위에서 지도합니다.</p></details>
+    <details class="faq"><summary>무료 체험은 정말 무료인가요?<span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg></span></summary><p>네. 첫 방문 1회 체험은 무료이며, 등록은 체험 후 결정하셔도 됩니다.</p></details>
   </section>
 
   <footer>
@@ -218,7 +292,10 @@
     <div class="credit">이 페이지는 <b>랜딩페이지 제작 포트폴리오 시안</b>입니다 · 가상의 스튜디오로 제작했습니다</div>
   </footer>
 
-  <div class="float"><a href="#apply" class="btn btn-gold btn-block">🧘 무료 체험 예약하기</a></div>
+  <div class="float"><a href="#apply" class="btn btn-gold btn-block">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.5"/><path d="M12 7.5v6"/><path d="m12 9-5 2.5"/><path d="m12 9 5 2.5"/><path d="m9 20 3-6 3 6"/></svg>
+    무료 체험 예약하기
+  </a></div>
 </div>
 
 <script>
